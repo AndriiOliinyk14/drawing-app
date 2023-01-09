@@ -10,7 +10,7 @@ export const INITIAL_PARAMETERS = {
   height: 500,
   isMouseDown: false,
   size: 10,
-  color: "red",
+  color: "#E71818",
   background: "#ffffff",
   lineCap: "round",
   lineJoin: "round",
