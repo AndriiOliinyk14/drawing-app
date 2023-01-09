@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>App</title>
+</head>
+
+<body id="root">
+    <div class="tools">
+        <button class="button tool" id="brush">
+            <img src="src/assets/tools/brush.png" />
+        </button>
+        <button class="button tool" id="eraser">
+            <img src="src/assets/tools/eraser.png" />
+        </button>
+        <button class="button" id="clear">Clear</button>
+        <div class="separator"></div>
+        <input type="range" id="size" min=1 max=100 />
+        <div class="separator"></div>
+
+        <div>
+            <span>Width:</span>
+            <input type="number" id="width">
+        </div>
+        <div>
+            <span>Heigh:</span>
+            <input type="number" id="height">
+        </div>
+        <div class="separator"></div>
+
+        <input class="color" type="color" name="" id="color">
+        <div class="separator"></div>
+
+        <button class="button" id="save">Save</button>
+        <button class="button" id="load">Load</button>
+        <a class="button" id="export">Export</a>
+
+    </div>
+    <div class="canvas-wrapper">
+        <canvas id="canvas" class="canvas"></canvas>
+
+    </div>
+
+    <div id="modal" class="modal-wrapper">
+        <div class="modal">
+            <button id="modal-closer" class='closer'>X
+            </button>
+            <h3 id="modal-title" class="modal-title">Title</h3>
+            <div id="modal-content" class="modal-content"></div>
+        </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
