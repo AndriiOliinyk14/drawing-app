@@ -1,7 +1,15 @@
 import { TOOLS, INITIAL_PARAMETERS } from "./const.js";
 import { handleLoad, handleSave } from "./modals.js";
+import brushIcon from "../assets/tools/brush.png";
+import eraserIcon from "../assets/tools/eraser.png";
 
 const canvas = document.getElementById("canvas");
+
+const brushImgEl = document.getElementById("brush-img");
+const eraserImgEl = document.getElementById("eraser-img");
+
+brushImgEl.src = brushIcon;
+eraserImgEl.src = eraserIcon;
 
 const saveEl = document.getElementById("save");
 const loadEl = document.getElementById("load");
