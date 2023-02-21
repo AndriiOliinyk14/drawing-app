@@ -2,3 +2,9 @@
 node_modules
 dist
 package-lock.json
+
+#IDEs
+.idea
+
+#tests
+coverage

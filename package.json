@@ -3,15 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "modulePaths": [
+    "<rootdir>/src"
+  ],
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve --open",
-    "test": "jest --config=jest.config.js"
+    "test": "jest --config=jest.config.js --coverage"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
     "@jest/globals": "^29.3.1",
+    "babel-jest": "^29.4.2",
     "css-loader": "^6.7.3",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
@@ -22,6 +28,8 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "jest-canvas-mock": "^2.4.0",
+    "jest-environment-jsdom": "^29.3.1",
     "mini-css-extract-plugin": "^2.7.2"
   }
 }
