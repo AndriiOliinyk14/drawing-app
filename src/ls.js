@@ -1,7 +1,9 @@
 import { LS_KEY } from "./const.js";
 
 export const saveProject = (name, item) => {
-  const prevImages = JSON.parse(localStorage.getItem(LS_KEY));
+  const prevImages = localStorage.getItem(LS_KEY)
+    ? JSON.parse(localStorage.getItem(LS_KEY))
+    : {};
 
   if (prevImages && Object.keys(prevImages).includes(name)) {
     alert("This name already exists, please enter another name");
@@ -14,7 +16,9 @@ export const saveProject = (name, item) => {
 };
 
 export const loadProjects = () => {
-  return JSON.parse(localStorage.getItem(LS_KEY));
+  return localStorage.getItem(LS_KEY)
+    ? JSON.parse(localStorage.getItem(LS_KEY))
+    : {};
 };
 
 export const loadProject = (item) => {
