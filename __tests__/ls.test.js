@@ -4,8 +4,7 @@
 
 import fs from "fs";
 import path from "path";
-import { describe, expect, test, beforeEach, jest } from "@jest/globals";
-import { TOOLS, INITIAL_PARAMETERS } from "../src/const";
+import { describe, expect, beforeEach, jest } from "@jest/globals";
 
 const html = fs.readFileSync(path.resolve(__dirname, "../index.html"), "utf8");
 

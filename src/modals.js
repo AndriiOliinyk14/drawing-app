@@ -62,8 +62,9 @@ export const handleLoad = (callback) => {
   removeAllBtn.className = "modal-btn";
   listContainer.className = "modal-load-list";
 
-  if (!projects) {
-    return handleChangeModalTitle("Not found projects");
+  if (!Object.keys(projects).length) {
+    handleChangeModalTitle("Not found projects");
+    return;
   }
 
   const renderList = () => {

@@ -4,7 +4,7 @@
 
 import fs from "fs";
 import path from "path";
-import { describe, expect, beforeEach, jest } from "@jest/globals";
+import { describe, expect, beforeEach } from "@jest/globals";
 import { TOOLS, INITIAL_PARAMETERS } from "../src/const";
 
 const html = fs.readFileSync(path.resolve(__dirname, "../index.html"), "utf8");
@@ -35,12 +35,24 @@ describe("application", () => {
   it("should change tool", () => {
     const { app } = require("../src/app");
 
-    app.changeTool(TOOLS.brush);
+    const brushEl = document.getElementById("brush");
+    const eraserEl = document.getElementById("eraser");
 
+    const brushMockFn = jest.fn();
+    const eraserMockFn = jest.fn();
+
+    brushEl.addEventListener("click", brushMockFn);
+    brushEl.click();
+
+    expect(brushMockFn).toBeCalled();
     expect(app.parameters.tool).toBe(TOOLS.brush);
 
     app.changeTool(TOOLS.eraser);
 
+    eraserEl.addEventListener("click", eraserMockFn);
+    eraserEl.click();
+
+    expect(eraserMockFn).toBeCalled();
     expect(app.parameters.tool).toBe(TOOLS.eraser);
   });
 
@@ -72,8 +84,6 @@ describe("application", () => {
   it("should reset to default parameters", () => {
     const { app } = require("../src/app");
 
-    //fix it
-
     app.changeTool(TOOLS.eraser);
 
     expect(app.parameters.tool).toEqual(TOOLS.eraser);
@@ -90,6 +100,7 @@ describe("application", () => {
     app.createCanvas();
 
     const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
 
     const eventDataDown = {
       clientX: 10,
@@ -143,10 +154,134 @@ describe("application", () => {
     app.createCanvas();
 
     const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
 
     app.linesArray = paths;
     app.redraw();
 
+    expect(ctx.moveTo).toBeCalledWith(paths[0].x, paths[0].y);
     expect(app.linesArray).toStrictEqual(paths);
+  });
+
+  it("should call save function", () => {
+    const { app } = require("../src/app");
+    const mockFc = jest.spyOn(app, "save");
+
+    const saveEl = document.getElementById("save");
+
+    saveEl.click();
+
+    expect(mockFc).toBeCalledTimes(1);
+  });
+
+  it("should call load function", () => {
+    const { app } = require("../src/app");
+    const mockFc = jest.spyOn(app, "load");
+
+    const loadEl = document.getElementById("load");
+
+    loadEl.click();
+
+    expect(mockFc).toBeCalledTimes(1);
+  });
+
+  it("should call export function", () => {
+    const { app } = require("../src/app");
+    const mockFc = jest.spyOn(app, "export");
+
+    const exportEl = document.getElementById("export");
+
+    exportEl.click();
+
+    expect(mockFc).toBeCalledTimes(1);
+  });
+});
+
+describe("DOM Event", () => {
+  it("should listening mousedown event", () => {
+    const mockFn = jest.fn();
+
+    const canvas = document.getElementById("canvas");
+
+    canvas.addEventListener("mousedown", mockFn);
+
+    const event = new MouseEvent("mousedown", {
+      bubbles: true,
+      cancelable: true,
+      view: window,
+    });
+
+    canvas.dispatchEvent(event);
+
+    expect(mockFn).toHaveBeenCalled();
+  });
+
+  it("should listening mouseup of canvas event", () => {
+    const mockFn = jest.fn();
+
+    const canvas = document.getElementById("canvas");
+
+    canvas.addEventListener("mouseup", mockFn);
+
+    const event = new MouseEvent("mouseup", {
+      bubbles: true,
+      cancelable: true,
+      view: window,
+    });
+
+    canvas.dispatchEvent(event);
+
+    expect(mockFn).toHaveBeenCalled();
+  });
+
+  it("should listening mouseup of document event", () => {
+    const mockFn = jest.fn();
+
+    document.addEventListener("mouseup", mockFn);
+
+    const event = new MouseEvent("mouseup", {
+      bubbles: true,
+      cancelable: true,
+      view: window,
+    });
+
+    document.dispatchEvent(event);
+
+    expect(mockFn).toHaveBeenCalled();
+  });
+
+  it("should listening mousemove event", () => {
+    const mockFn = jest.fn();
+
+    const canvas = document.getElementById("canvas");
+
+    canvas.addEventListener("mousemove", mockFn);
+
+    const event = new MouseEvent("mousemove", {
+      bubbles: true,
+      cancelable: true,
+      view: window,
+      clientX: 100,
+      clientY: 200,
+    });
+
+
+
+
+    canvas.dispatchEvent(event);
+
+    expect(mockFn).toHaveBeenCalled();
+  });
+
+  it("should be clicked on clear button", () => {
+    const mockFn = jest.fn();
+
+    const button = document.getElementById("clear");
+
+    button.addEventListener("click", mockFn);
+
+    button.click();
+
+    expect(mockFn).toHaveBeenCalled();
   });
 });
