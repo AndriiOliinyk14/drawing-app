@@ -116,6 +116,8 @@ describe("application", () => {
     app.onMouseMove(canvas, eventDataMove);
     app.onMouseUp();
 
+    expect(ctx).toMatchSnapshot();
+
     expect(paths).toStrictEqual(app.linesArray);
   });
 
@@ -171,6 +173,9 @@ describe("application", () => {
 
     saveEl.click();
 
+    const btnEl = document.getElementsByClassName("modal-btn")[0];
+    btnEl.click();
+
     expect(mockFc).toBeCalledTimes(1);
   });
 
@@ -181,6 +186,12 @@ describe("application", () => {
     const loadEl = document.getElementById("load");
 
     loadEl.click();
+
+    const modalListItemEl =
+      document.getElementsByClassName("modal-load-item")[0];
+    const btnItemEl = modalListItemEl.children.item(0);
+
+    btnItemEl.click();
 
     expect(mockFc).toBeCalledTimes(1);
   });
@@ -250,6 +261,51 @@ describe("DOM Event", () => {
     expect(mockFn).toHaveBeenCalled();
   });
 
+  it("should listening change of size page", () => {
+    const mockFn = jest.fn();
+
+    const event = new CustomEvent("change");
+
+    const widthElement = document.getElementById("width");
+    const heightElement = document.getElementById("height");
+
+    widthElement.addEventListener("change", (e) => mockFn());
+    heightElement.addEventListener("change", (e) => mockFn());
+
+    widthElement.dispatchEvent(event);
+    heightElement.dispatchEvent(event);
+
+    expect(mockFn).toHaveBeenCalledTimes(2);
+  });
+
+  it("should listening change of a tool size", () => {
+    const mockFn = jest.fn();
+
+    const event = new CustomEvent("change");
+
+    const element = document.getElementById("size");
+
+    element.addEventListener("change", (e) => mockFn());
+
+    element.dispatchEvent(event);
+
+    expect(mockFn).toHaveBeenCalled();
+  });
+
+  it("should listening change of a color picker", () => {
+    const mockFn = jest.fn();
+
+    const event = new CustomEvent("change");
+
+    const element = document.getElementById("color");
+
+    element.addEventListener("change", (e) => mockFn());
+
+    element.dispatchEvent(event);
+
+    expect(mockFn).toHaveBeenCalled();
+  });
+
   it("should listening mousemove event", () => {
     const mockFn = jest.fn();
 
@@ -264,9 +320,6 @@ describe("DOM Event", () => {
       clientX: 100,
       clientY: 200,
     });
-
-
-
 
     canvas.dispatchEvent(event);
 

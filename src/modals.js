@@ -99,6 +99,6 @@ export const handleLoad = (callback) => {
   modalContent.append(...[listContainer, removeAllBtn]);
 };
 
-window.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   modalCloser.addEventListener("click", handleCloseModal);
 });

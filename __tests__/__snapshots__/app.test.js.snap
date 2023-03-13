@@ -1,0 +1,764 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`application should draw 1`] = `
+CanvasRenderingContext2D {
+  "_canvas": <canvas
+    class="canvas"
+    height="500"
+    id="canvas"
+    width="600"
+  />,
+  "_clipIndex": 1,
+  "_clipStack": [
+    [],
+  ],
+  "_directionStack": [
+    "inherit",
+  ],
+  "_drawCalls": [
+    {
+      "props": {
+        "height": 150,
+        "width": 300,
+        "x": 0,
+        "y": 0,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "clearRect",
+    },
+    {
+      "props": {
+        "height": 150,
+        "width": 300,
+        "x": 0,
+        "y": 0,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "clearRect",
+    },
+    {
+      "props": {
+        "height": 150,
+        "width": 300,
+        "x": 0,
+        "y": 0,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "clearRect",
+    },
+    {
+      "props": {
+        "height": 500,
+        "width": 600,
+        "x": 0,
+        "y": 0,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "fillRect",
+    },
+    {
+      "props": {
+        "height": 500,
+        "width": 600,
+        "x": 0,
+        "y": 0,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "clearRect",
+    },
+    {
+      "props": {
+        "height": 500,
+        "width": 600,
+        "x": 0,
+        "y": 0,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "clearRect",
+    },
+    {
+      "props": {
+        "height": 500,
+        "width": 600,
+        "x": 0,
+        "y": 0,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "fillRect",
+    },
+    {
+      "props": {
+        "path": [
+          {
+            "props": {},
+            "transform": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ],
+            "type": "beginPath",
+          },
+          {
+            "props": {
+              "x": 10,
+              "y": 10,
+            },
+            "transform": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ],
+            "type": "moveTo",
+          },
+          {
+            "props": {
+              "x": 30,
+              "y": 40,
+            },
+            "transform": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ],
+            "type": "lineTo",
+          },
+        ],
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "stroke",
+    },
+  ],
+  "_events": [
+    {
+      "props": {
+        "height": 150,
+        "width": 300,
+        "x": 0,
+        "y": 0,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "clearRect",
+    },
+    {
+      "props": {
+        "height": 150,
+        "width": 300,
+        "x": 0,
+        "y": 0,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "clearRect",
+    },
+    {
+      "props": {
+        "height": 150,
+        "width": 300,
+        "x": 0,
+        "y": 0,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "clearRect",
+    },
+    {
+      "props": {
+        "value": "#ffffff",
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "fillStyle",
+    },
+    {
+      "props": {
+        "value": true,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "imageSmoothingEnabled",
+    },
+    {
+      "props": {
+        "height": 500,
+        "width": 600,
+        "x": 0,
+        "y": 0,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "fillRect",
+    },
+    {
+      "props": {
+        "height": 500,
+        "width": 600,
+        "x": 0,
+        "y": 0,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "clearRect",
+    },
+    {
+      "props": {
+        "height": 500,
+        "width": 600,
+        "x": 0,
+        "y": 0,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "clearRect",
+    },
+    {
+      "props": {
+        "value": "#ffffff",
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "fillStyle",
+    },
+    {
+      "props": {
+        "value": true,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "imageSmoothingEnabled",
+    },
+    {
+      "props": {
+        "height": 500,
+        "width": 600,
+        "x": 0,
+        "y": 0,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "fillRect",
+    },
+    {
+      "props": {},
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "beginPath",
+    },
+    {
+      "props": {
+        "x": 10,
+        "y": 10,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "moveTo",
+    },
+    {
+      "props": {
+        "value": 10,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "lineWidth",
+    },
+    {
+      "props": {
+        "value": "round",
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "lineCap",
+    },
+    {
+      "props": {
+        "value": "round",
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "lineJoin",
+    },
+    {
+      "props": {
+        "value": "#e71818",
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "strokeStyle",
+    },
+    {
+      "props": {
+        "x": 30,
+        "y": 40,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "lineTo",
+    },
+    {
+      "props": {
+        "path": [
+          {
+            "props": {},
+            "transform": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ],
+            "type": "beginPath",
+          },
+          {
+            "props": {
+              "x": 10,
+              "y": 10,
+            },
+            "transform": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ],
+            "type": "moveTo",
+          },
+          {
+            "props": {
+              "x": 30,
+              "y": 40,
+            },
+            "transform": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ],
+            "type": "lineTo",
+          },
+        ],
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "stroke",
+    },
+  ],
+  "_fillStyleStack": [
+    "#ffffff",
+  ],
+  "_filterStack": [
+    "none",
+  ],
+  "_fontStack": [
+    "10px sans-serif",
+  ],
+  "_globalAlphaStack": [
+    1,
+  ],
+  "_globalCompositeOperationStack": [
+    "source-over",
+  ],
+  "_imageSmoothingEnabledStack": [
+    true,
+  ],
+  "_imageSmoothingQualityStack": [
+    "low",
+  ],
+  "_lineCapStack": [
+    "round",
+  ],
+  "_lineDashOffsetStack": [
+    0,
+  ],
+  "_lineDashStack": [
+    [],
+  ],
+  "_lineJoinStack": [
+    "round",
+  ],
+  "_lineWidthStack": [
+    10,
+  ],
+  "_miterLimitStack": [
+    10,
+  ],
+  "_path": [
+    {
+      "props": {},
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "beginPath",
+    },
+    {
+      "props": {
+        "x": 10,
+        "y": 10,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "moveTo",
+    },
+    {
+      "props": {
+        "x": 30,
+        "y": 40,
+      },
+      "transform": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+      ],
+      "type": "lineTo",
+    },
+  ],
+  "_shadowBlurStack": [
+    0,
+  ],
+  "_shadowColorStack": [
+    "rgba(0, 0, 0, 0)",
+  ],
+  "_shadowOffsetXStack": [
+    0,
+  ],
+  "_shadowOffsetYStack": [
+    0,
+  ],
+  "_stackIndex": 0,
+  "_strokeStyleStack": [
+    "#e71818",
+  ],
+  "_textAlignStack": [
+    "start",
+  ],
+  "_textBaselineStack": [
+    "alphabetic",
+  ],
+  "_transformStack": [
+    [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+    ],
+  ],
+  "addHitRegion": [MockFunction],
+  "arc": [MockFunction],
+  "arcTo": [MockFunction],
+  "beginPath": [MockFunction] {
+    "calls": [
+      [],
+    ],
+    "results": [
+      {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "bezierCurveTo": [MockFunction],
+  "clearHitRegions": [MockFunction],
+  "clearRect": [MockFunction] {
+    "calls": [
+      [
+        0,
+        0,
+        600,
+        500,
+      ],
+    ],
+    "results": [
+      {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "clip": [MockFunction],
+  "closePath": [MockFunction],
+  "createImageData": [MockFunction],
+  "createLinearGradient": [MockFunction],
+  "createPattern": [MockFunction],
+  "createRadialGradient": [MockFunction],
+  "drawFocusIfNeeded": [MockFunction],
+  "drawImage": [MockFunction],
+  "ellipse": [MockFunction],
+  "fill": [MockFunction],
+  "fillRect": [MockFunction] {
+    "calls": [
+      [
+        0,
+        0,
+        600,
+        500,
+      ],
+    ],
+    "results": [
+      {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "fillText": [MockFunction],
+  "getImageData": [MockFunction],
+  "getLineDash": [MockFunction],
+  "getTransform": [MockFunction],
+  "isPointInPath": [MockFunction],
+  "isPointInStroke": [MockFunction],
+  "lineTo": [MockFunction] {
+    "calls": [
+      [
+        30,
+        40,
+      ],
+    ],
+    "results": [
+      {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "measureText": [MockFunction],
+  "moveTo": [MockFunction] {
+    "calls": [
+      [
+        10,
+        10,
+      ],
+    ],
+    "results": [
+      {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "putImageData": [MockFunction],
+  "quadraticCurveTo": [MockFunction],
+  "rect": [MockFunction],
+  "removeHitRegion": [MockFunction],
+  "resetTransform": [MockFunction],
+  "restore": [MockFunction],
+  "rotate": [MockFunction],
+  "save": [MockFunction],
+  "scale": [MockFunction],
+  "scrollPathIntoView": [MockFunction],
+  "setLineDash": [MockFunction],
+  "setTransform": [MockFunction],
+  "stroke": [MockFunction] {
+    "calls": [
+      [],
+    ],
+    "results": [
+      {
+        "type": "return",
+        "value": undefined,
+      },
+    ],
+  },
+  "strokeRect": [MockFunction],
+  "strokeText": [MockFunction],
+  "transform": [MockFunction],
+  "translate": [MockFunction],
+}
+`;

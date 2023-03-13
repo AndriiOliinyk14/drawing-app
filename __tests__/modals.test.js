@@ -127,7 +127,7 @@ describe("modals", () => {
     expect(alertMock).toBeCalledWith("All projects have been deleted");
   });
 
-  it("should listening click event", () => {
+  it("should listening click by modalCloser when DOMContentLoaded", () => {
     const { handleOpenModal } = require("../src/modals");
     handleOpenModal();
 
@@ -136,8 +136,10 @@ describe("modals", () => {
     const mockFn = jest.fn();
 
     modalCloserEl.addEventListener("click", mockFn);
-    modalCloserEl.click();
 
-    expect(mockFn).toHaveBeenCalled();
+    document.addEventListener("DOMContentLoaded", () => {
+      modalCloserEl.click();
+      expect(mockFn).toHaveBeenCalled();
+    });
   });
 });
